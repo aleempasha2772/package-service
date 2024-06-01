@@ -2,6 +2,7 @@ package com.example.package_service.Controller;
 
 
 import com.example.package_service.Model.ParcelOrder;
+import com.example.package_service.Model.PaymentRequest;
 import com.example.package_service.Service.ParcelOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,5 +26,10 @@ public class parcelOrderController {
     @GetMapping
     ResponseEntity<List<ParcelOrder>> getAllParcelOrders(){
         return ResponseEntity.ok().body(parcelOrderService.getAllParcelOrders());
+    }
+
+    @GetMapping("/payment-action")
+    ResponseEntity<PaymentRequest> getPaymentAction(){
+        return ResponseEntity.ok().body(parcelOrderService.calculateParcelPrice());
     }
 }

@@ -19,6 +19,7 @@ public class Parcel {
     private double weight;
     private String value;
 
+
     /*@Embedded
     private Dimensions dimensions;
 
