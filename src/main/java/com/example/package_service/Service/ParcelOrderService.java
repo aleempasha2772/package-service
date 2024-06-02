@@ -36,6 +36,7 @@ public class ParcelOrderService {
     public PaymentRequest calculateParcelPrice(){
         PaymentRequest paymentRequest = new PaymentRequest();
         paymentRequest.setId(a.getId());
+
         double Weight = a.getParcel().getWeight();
         double Price;
         if (Weight <= 1000){

@@ -1,5 +1,6 @@
+
 server:
-  port: 8082
+  port: 8083
 
 spring:
   datasource:
@@ -11,8 +12,8 @@ spring:
     database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
-#  application:
-#    name: ORDER-SERVICE
-#
-#  config:
-#    import: configserver:http://localhost:9296
+  application:
+    name: PACKAGE-SERVICE
+  config:
+    import: configserver:http://localhost:9296
+
